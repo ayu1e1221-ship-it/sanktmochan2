@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankat Mochan Group of Institution</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== 1. HEADER / NAVBAR ==================== -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="logo.jpg" alt="Sankat Mochan Group of Institution Logo" class="logo-img">
+            </div>
+            <div class="logo-text">
+                <h1>Sankat Mochan</h1>
+                <p>Group of Institution</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="#academics"><i class="fa-solid fa-graduation-cap"></i> Academics</a></li>
+                <li><a href="#teachers"><i class="fa-solid fa-users"></i> Teachers</a></li>
+                <li><a href="#reviews"><i class="fa-solid fa-star"></i> Reviews</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="search-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <!-- बैकग्राउंड वीडियो (Background Video - Plays 2 times then stops) -->
+        <video class="hero-bg-video" id="heroBgVideo" autoplay muted playsinline>
+            <source src="hero1.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+            <h2>Sankat Mochan</h2>
+            <h3>Group of Institution</h3>
+            <p class="hero-tagline">
+                <i class="fa-solid fa-arrow-right"></i> Learn <span>&bull;</span> Grow <span>&bull;</span> Excel
+            </p>
+            <p class="hero-mission">
+                Our mission is to provide quality education<br>
+                for a brighter future.
+            </p>
+            <a href="#about" class="explore-btn">
+                Explore More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- दाहिने साइड का हीरो विजुअल ऑटो-स्लाइडर (Right Side Hero Visual Slider - 3 Slides) -->
+        <div class="hero-visual">
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slide active">
+                    <img src="hero visul.scse.jpeg" alt="Sankat Mochan CBSE" class="hero-slide-img">
+                </div>
+                <div class="hero-slide">
+                    <img src="hero visul.upboard.jpeg" alt="Sankat Mochan UP Board" class="hero-slide-img">
+                </div>
+                <div class="hero-slide">
+                    <img src="hero visul.ster.jpeg" alt="Sankat Mochan Star" class="hero-slide-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. THREE FEATURE CARDS ==================== -->
+    <section class="feature-cards" id="about">
+        <!-- Card 1: About Our School -->
+        <div class="f-card card-blue">
+            <div class="f-icon">
+                <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="f-text">
+                <h4>About Our School</h4>
+                <p>Know more about our journey</p>
+            </div>
+            <a href="#about" class="f-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Card 2: Academics -->
+        <div class="f-card card-purple" id="academics">
+            <div class="f-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="f-text">
+                <h4>Academics</h4>
+                <p>Building a strong foundation</p>
+            </div>
+            <a href="#academics" class="f-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Card 3: Contact Us -->
+        <div class="f-card card-green">
+            <div class="f-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="f-text">
+                <h4>Contact Us</h4>
+                <p>We're here to help</p>
+            </div>
+            <a href="#contact" class="f-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== 4. OUR EXPERT TEACHERS ==================== -->
+    <section class="teachers-section" id="teachers">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Our <span>Expert</span> Teachers</h2>
+            <span class="line"></span>
+        </div>
+
+        <div class="teachers-carousel-wrapper">
+            <button class="slider-btn teacher-prev" id="teacherPrev" aria-label="Previous Teacher">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <div class="teachers-viewport">
+                <div class="teachers-track" id="teachersTrack">
+                    <!-- Teacher 1 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Mathematics</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 10+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 2 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Physics</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 12+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Chemistry</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 9+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 4 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>English</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 11+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 5 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Biology</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 10+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 6 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Hindi</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 12+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 7 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Computer Science</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 8+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Teacher 8 -->
+                    <div class="teacher-card">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <div class="teacher-info">
+                            <h4>Name : XX</h4>
+                            <p>Social Science</p>
+                            <span class="exp"><i class="fa-solid fa-star"></i> 11+ Years</span>
+                        </div>
+                        <button class="t-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-btn teacher-next" id="teacherNext" aria-label="Next Teacher">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== 5. WHAT OUR COMMUNITY SAYS (REVIEWS) ==================== -->
+    <section class="reviews-section" id="reviews">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>What Our <span>Community</span> Says</h2>
+            <span class="line"></span>
+        </div>
+
+        <div class="reviews-viewport">
+            <div class="reviews-track" id="reviewsTrack">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Priya Verma">
+                    <div class="review-content">
+                        <p>"Sankat Mochan Group of Institution gave my child immense confidence, discipline, and a wonderful learning environment."</p>
+                        <div class="review-footer">
+                            <strong>- Priya Verma (Parent)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80" alt="Rohan Singh">
+                    <div class="review-content">
+                        <p>"Sankat Mochan is the best institution with caring, knowledgeable teachers and modern smart classrooms!"</p>
+                        <div class="review-footer">
+                            <strong>- Rohan Singh (Student)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Amit Kumar">
+                    <div class="review-content">
+                        <p>"A perfect place for quality education and moral values. Sankat Mochan truly shapes a brighter future for every student."</p>
+                        <div class="review-footer">
+                            <strong>- Amit Kumar (Parent)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Sneha Mishra">
+                    <div class="review-content">
+                        <p>"The science labs, computer education, and personal guidance at Sankat Mochan Group of Institution are outstanding!"</p>
+                        <div class="review-footer">
+                            <strong>- Sneha Mishra (Student)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Rajesh Tiwari">
+                    <div class="review-content">
+                        <p>"We are proud parents! Sankat Mochan focuses on both academic excellence and overall personality development."</p>
+                        <div class="review-footer">
+                            <strong>- Rajesh Tiwari (Parent)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80" alt="Aman Dubey">
+                    <div class="review-content">
+                        <p>"Thanks to the dedicated teachers at Sankat Mochan, I scored top marks in my board exams with crystal-clear concepts."</p>
+                        <div class="review-footer">
+                            <strong>- Aman Dubey (Student)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="Sunita Pandey">
+                    <div class="review-content">
+                        <p>"Sankat Mochan Group of Institution provides a safe, inspiring, and disciplined campus where children love to learn every day."</p>
+                        <div class="review-footer">
+                            <strong>- Sunita Pandey (Parent)</strong>
+                            <span class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. GET IN TOUCH (CONTACT BAR) ==================== -->
+    <section class="contact-bar" id="contact">
+        <div class="contact-heading">
+            <div class="headset-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+                <h3>Get In Touch</h3>
+                <p>Have any query? Feel free to reach us.</p>
+            </div>
+        </div>
+
+        <div class="contact-details">
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@sankatmochan.edu.in</p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-inputs">
+                <div class="top-inputs">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" class="msg-input" placeholder="Your Message" required>
+            </div>
+            <button type="submit" class="send-btn">
+                <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+        </form>
+
+        <!-- Copyright & Developer Data in the same line -->
+        <div class="copyright developer-data" id="developer">
+            <p><i class="fa-solid fa-code"></i> <strong>Designed &amp; Developed by:</strong> Web Developer</p>
+            <p><i class="fa-solid fa-phone"></i> +91 7408120016</p>
+            <p>&copy; 2026 Sankat Mochan Group of Institution</p>
+        </div>
+    </section>
+
+    <!-- ==================== 7. BOTTOM NAVIGATION PILL BAR ==================== -->
+    <footer class="bottom-dock">
+        <div class="dock-container">
+            <a href="#home" class="dock-btn dock-home active">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+            <a href="#about" class="dock-btn dock-recap">
+                <i class="fa-solid fa-arrows-rotate"></i> Recap
+            </a>
+            <a href="#developer" class="dock-btn dock-developer">
+                <i class="fa-solid fa-laptop-code"></i> Developer
+            </a>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         MOBILE / PHONE EXCLUSIVE DESIGN (Matches Uploaded Phone Screenshot)
+         Only visible on Mobile Screens (max-width: 768px)
+         ===================================================================== -->
+    <div class="mobile-layout" id="mHome">
+        <!-- 1. Mobile Top Header (with Curved Wave Bottom like Screenshot) -->
+        <header class="m-header">
+            <div class="m-header-content">
+                <div class="m-logo-wrap">
+                    <img src="logo.jpg" alt="Sankat Mochan Logo" class="m-logo-img">
+                </div>
+                <div class="m-title-wrap">
+                    <h1>Sankat <span>Mochan</span></h1>
+                    <p>Learn &bull; Grow &bull; Excel</p>
+                </div>
+                <button class="m-menu-btn" id="mMenuBtn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Header Bottom Wave (लहर) overlapping Hero Section -->
+            <svg class="m-header-wave" viewBox="0 0 400 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="headerWaveFill" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#051844" />
+                        <stop offset="60%" stop-color="#0a2b73" />
+                        <stop offset="100%" stop-color="#08205b" />
+                    </linearGradient>
+                    <linearGradient id="headerWaveRim" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#38bdf8" />
+                        <stop offset="50%" stop-color="#bae6fd" />
+                        <stop offset="100%" stop-color="#3b82f6" />
+                    </linearGradient>
+                </defs>
+                <!-- Soft Outer Glow Wave -->
+                <path d="M 0,0 L 400,0 L 400,15 C 315,27 215,3 115,17 C 60,25 22,19 0,11 Z" fill="rgba(56, 189, 248, 0.35)" />
+                <!-- Main Dark Navy Wave Body -->
+                <path d="M 0,0 L 400,0 L 400,12 C 315,24 215,1 115,14 C 60,22 22,16 0,8 Z" fill="url(#headerWaveFill)" />
+                <!-- Glowing Sky-Blue Wave Rim Line -->
+                <path d="M 0,9 C 22,17 60,23 115,15 C 215,2 315,25 400,13" fill="none" stroke="url(#headerWaveRim)" stroke-width="2.6" stroke-linecap="round" />
+            </svg>
+        </header>
+
+        <!-- Mobile Slide-Down Drawer Menu -->
+        <nav class="m-drawer" id="mDrawer">
+            <a href="#mHome"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#mNotices"><i class="fa-solid fa-bell"></i> Latest Notices</a>
+            <a href="#mTeachers"><i class="fa-solid fa-users"></i> Teacher Profiles</a>
+            <a href="#mReviews"><i class="fa-solid fa-star"></i> Student Reviews</a>
+            <a href="tel:+917408120016"><i class="fa-solid fa-phone"></i> Call: +91 7408120016</a>
+        </nav>
+
+        <!-- 2. Mobile Hero Video Banner -->
+        <section class="m-hero">
+            <video class="m-hero-video" id="mHeroVideo" autoplay muted playsinline>
+                <source src="hero1.mp4" type="video/mp4">
+            </video>
+            <div class="m-hero-overlay"></div>
+
+            <div class="m-hero-text">
+                <h2>Sankat Mochan</h2>
+                <h3>Group of Institution</h3>
+                <p class="m-hero-mission">
+                    Our mission is to provide quality education<br>
+                    for a brighter future.
+                </p>
+            </div>
+
+            <!-- Bottom Rising Zigzag Graph: Wide distance, Excel shifted higher up, fast arrow shoots up when Excel is hit -->
+            <div class="m-growth-graph" id="mGrowthGraph">
+                <svg class="m-graph-svg" viewBox="0 0 360 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="graphLineGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#fb923c" />
+                            <stop offset="45%" stop-color="#facc15" />
+                            <stop offset="82%" stop-color="#34d399" />
+                            <stop offset="100%" stop-color="#38bdf8" />
+                        </linearGradient>
+                        <linearGradient id="graphAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#facc15" stop-opacity="0.32" />
+                            <stop offset="55%" stop-color="#fb923c" stop-opacity="0.12" />
+                            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+                        </linearGradient>
+                        <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#facc15" />
+                            <stop offset="55%" stop-color="#34d399" />
+                            <stop offset="100%" stop-color="#7dd3fc" />
+                        </linearGradient>
+                        <filter id="graphNeonGlow" x="-25%" y="-25%" width="150%" height="150%">
+                            <feGaussianBlur stdDeviation="3.5" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Subtle Modern Telemetry Grid Lines -->
+                    <g class="m-graph-grid">
+                        <line x1="4" y1="158" x2="340" y2="158" stroke="rgba(255,255,255,0.14)" stroke-width="0.9" stroke-dasharray="2 5" />
+                        <line x1="4" y1="54" x2="340" y2="54" stroke="rgba(255,255,255,0.14)" stroke-width="0.9" stroke-dasharray="2 5" />
+                        <line x1="4" y1="-8" x2="340" y2="-8" stroke="rgba(255,255,255,0.14)" stroke-width="0.9" stroke-dasharray="2 5" />
+                    </g>
+
+                    <!-- Warm Gold-to-Cyan Translucent Area Fill Under Zigzag Curve -->
+                    <path class="m-graph-area" d="M 2 169 L 12 156 L 18 163 L 24 158 L 58 142 L 92 98 L 124 108 L 168 54 L 214 66 L 256 26 L 284 36 L 328 -8 L 328 174 L 2 174 Z" fill="url(#graphAreaGrad)" />
+
+                    <!-- Soft Holographic Glow Trail -->
+                    <path class="m-graph-glow" pathLength="100" d="M 2 169 L 12 156 L 18 163 L 24 158 L 58 142 L 92 98 L 124 108 L 168 54 L 214 66 L 256 26 L 284 36 L 328 -8" stroke="url(#graphLineGrad)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#graphNeonGlow)" />
+
+                    <!-- Main Sleek Metallic Growth Curve: Learn (24,158) -> Grow at School Top (168,54) -> Excel (328,-8) -->
+                    <path class="m-graph-line" pathLength="100" d="M 2 169 L 12 156 L 18 163 L 24 158 L 58 142 L 92 98 L 124 108 L 168 54 L 214 66 L 256 26 L 284 36 L 328 -8" stroke="url(#graphLineGrad)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+
+                    <!-- Fine Shimmering Highlight Core -->
+                    <path class="m-graph-core" pathLength="100" d="M 2 169 L 12 156 L 18 163 L 24 158 L 58 142 L 92 98 L 124 108 L 168 54 L 214 66 L 256 26 L 284 36 L 328 -8" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+
+                    <!-- Fast Shooting Energy Arrow from Excel (328,-8) straight up -->
+                    <g class="m-shoot-arrow">
+                        <line x1="328" y1="-8" x2="358" y2="-34" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" opacity="0.38" filter="url(#graphNeonGlow)" />
+                        <line x1="328" y1="-8" x2="358" y2="-34" stroke="url(#arrowGrad)" stroke-width="3.8" stroke-linecap="round" />
+                        <line x1="328" y1="-8" x2="356" y2="-32" stroke="#ffffff" stroke-width="1.1" stroke-linecap="round" opacity="0.9" />
+                        <polygon points="368,-42 344,-37 354,-30 357,-20" fill="url(#arrowGrad)" filter="url(#graphNeonGlow)" />
+                    </g>
+
+                    <!-- Expanding Shockwave Ripple Rings -->
+                    <circle class="m-node-ring ring-learn" cx="24" cy="158" r="6" />
+                    <circle class="m-node-ring ring-grow" cx="168" cy="54" r="6" />
+                    <circle class="m-node-ring ring-excel" cx="328" cy="-8" r="7" />
+
+                    <!-- Double-Ring Glowing Orb Pins -->
+                    <circle class="m-graph-dot dot-learn" cx="24" cy="158" r="5" />
+                    <circle class="m-graph-dot dot-grow" cx="168" cy="54" r="5" />
+                    <circle class="m-graph-dot dot-excel" cx="328" cy="-8" r="6" />
+                </svg>
+
+                <!-- Step 1: Bottom (Learn) -->
+                <span class="m-step-label step-learn"><i class="fa-solid fa-book-open"></i> Learn</span>
+                <!-- Step 2: Middle (Grow) -->
+                <span class="m-step-label step-grow"><i class="fa-solid fa-seedling"></i> Grow</span>
+                <!-- Step 3: Much Higher & Further Distance (Excel) -->
+                <span class="m-step-label step-excel"><i class="fa-solid fa-trophy"></i> Excel</span>
+            </div>
+        </section>
+
+        <!-- 3. Our Achievers Strip (Continuous Auto-Sliding with More Students) -->
+        <section class="m-achievers">
+            <div class="m-ach-left">
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                    <strong>Our</strong>
+                    <span>Achievers</span>
+                </div>
+            </div>
+            <div class="m-ach-right">
+                <div class="m-ach-track" id="mAchTrack">
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Aarav Sharma">
+                        <div>
+                            <h5>Aarav Sharma</h5>
+                            <p>Top Performer</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&q=80" alt="Diya Singh">
+                        <div>
+                            <h5>Diya Singh</h5>
+                            <p>Academic Star</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Rohan Verma">
+                        <div>
+                            <h5>Rohan Verma</h5>
+                            <p>Excellent Performance</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Ananya Dubey">
+                        <div>
+                            <h5>Ananya Dubey</h5>
+                            <p>Science Topper</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Vikas Tiwari">
+                        <div>
+                            <h5>Vikas Tiwari</h5>
+                            <p>Maths Genius</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&q=80" alt="Priya Mishra">
+                        <div>
+                            <h5>Priya Mishra</h5>
+                            <p>Board Merit Holder</p>
+                        </div>
+                    </div>
+                    <div class="m-ach-item">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" alt="Aditya Pandey">
+                        <div>
+                            <h5>Aditya Pandey</h5>
+                            <p>District Rank 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Two Action Buttons (Admission Open & Free Call 24x7) -->
+        <section class="m-actions">
+            <a href="tel:+917408120016" class="m-action-card m-card-yellow">
+                <div class="m-act-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="m-act-info">
+                    <h4>Admission Open</h4>
+                    <p>Enroll Now for a Brighter Future</p>
+                </div>
+                <span class="m-act-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#mHome" class="m-action-card m-card-green" id="mRecallBtn">
+                <div class="m-act-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="m-act-info">
+                    <h4>Recap</h4>
+                    <p>Quick School Overview</p>
+                </div>
+                <span class="m-act-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </section>
+
+        <!-- 5. Latest Notice Box (Compact by default, expands on clicking View Notice) -->
+        <section class="m-notice-box" id="mNotices">
+            <div class="m-notice-header-row">
+                <div class="m-notice-title">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <div>
+                        <strong>Latest</strong>
+                        <span>Notice</span>
+                    </div>
+                </div>
+
+                <div class="m-notice-items">
+                    <div class="m-notice-row">
+                        <span class="m-tag-new">New</span>
+                        <p class="m-notice-text">Annual Function 2026 &ndash; Registration Open</p>
+                        <span class="m-notice-date"><i class="fa-regular fa-calendar-days"></i> 21 Nov 2026</span>
+                    </div>
+                    <div class="m-notice-row m-extra-notice">
+                        <span class="m-tag-new">New</span>
+                        <p class="m-notice-text">Winter Vacation Schedule Released</p>
+                        <span class="m-notice-date"><i class="fa-regular fa-calendar-days"></i> 20 Nov 2026</span>
+                    </div>
+                    <div class="m-notice-row m-extra-notice">
+                        <span class="m-tag-new">New</span>
+                        <p class="m-notice-text">New Session Admission Form Available at Office</p>
+                        <span class="m-notice-date"><i class="fa-regular fa-calendar-days"></i> 18 Nov 2026</span>
+                    </div>
+                    <div class="m-notice-row m-extra-notice">
+                        <span class="m-tag-new">New</span>
+                        <p class="m-notice-text">Parent-Teacher Meeting (PTM) on Saturday</p>
+                        <span class="m-notice-date"><i class="fa-regular fa-calendar-days"></i> 15 Nov 2026</span>
+                    </div>
+                </div>
+
+                <button type="button" class="m-view-all-btn" id="mViewNoticeBtn">
+                    View Notice <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 7. Our Teacher Profiles (Auto-Sliding with 4 More Teachers Added) -->
+        <section class="m-teachers" id="mTeachers">
+            <div class="m-sec-head">
+                <div class="m-sec-title">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Our <span>Teacher</span> Profiles</h3>
+                </div>
+                <button type="button" class="m-outline-pill" id="mViewAllTeachersBtn">
+                    View All Teachers <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="m-teachers-row" id="mTeachersViewport">
+                <div class="m-teachers-track" id="mTeachersTrack">
+                    <!-- Card 1 -->
+                    <div class="m-t-card m-t-peach">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>English Teacher</p>
+                        <span class="m-exp-pill">10+ Years Experience</span>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="m-t-card m-t-mint">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Mathematics Teacher</p>
+                        <span class="m-exp-pill">12+ Years Experience</span>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="m-t-card m-t-lavender">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Science Teacher</p>
+                        <span class="m-exp-pill">10+ Years Experience</span>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="m-t-card m-t-peach">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Physics Teacher</p>
+                        <span class="m-exp-pill">12+ Years Experience</span>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="m-t-card m-t-mint">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Chemistry Teacher</p>
+                        <span class="m-exp-pill">9+ Years Experience</span>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="m-t-card m-t-lavender">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Computer Teacher</p>
+                        <span class="m-exp-pill">8+ Years Experience</span>
+                    </div>
+                    <!-- Card 7 (Added) -->
+                    <div class="m-t-card m-t-peach">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Biology Teacher</p>
+                        <span class="m-exp-pill">11+ Years Experience</span>
+                    </div>
+                    <!-- Card 8 (Added) -->
+                    <div class="m-t-card m-t-mint">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Hindi Teacher</p>
+                        <span class="m-exp-pill">14+ Years Experience</span>
+                    </div>
+                    <!-- Card 9 (Added) -->
+                    <div class="m-t-card m-t-lavender">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Social Science Teacher</p>
+                        <span class="m-exp-pill">10+ Years Experience</span>
+                    </div>
+                    <!-- Card 10 (Added) -->
+                    <div class="m-t-card m-t-peach">
+                        <img src="photo ex.jpeg" alt="Name XX">
+                        <h4>Name : XX</h4>
+                        <p>Sanskrit Teacher</p>
+                        <span class="m-exp-pill">9+ Years Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section-wise All Teachers Container (Expands on clicking View All Teachers) -->
+            <div class="m-all-teachers-list" id="mAllTeachersList">
+                <div class="m-teacher-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-flask"></i> Science &amp; Mathematics</div>
+                    <div class="m-teacher-grid">
+                        <div class="m-teacher-mini-card m-t-mint">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Mathematics Teacher</p>
+                                <span class="m-exp-pill">12+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-lavender">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Science Teacher</p>
+                                <span class="m-exp-pill">10+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-peach">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Physics Teacher</p>
+                                <span class="m-exp-pill">12+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-mint">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Chemistry Teacher</p>
+                                <span class="m-exp-pill">9+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-peach">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Biology Teacher</p>
+                                <span class="m-exp-pill">11+ Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-teacher-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-book-open"></i> Languages &amp; Literature</div>
+                    <div class="m-teacher-grid">
+                        <div class="m-teacher-mini-card m-t-peach">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>English Teacher</p>
+                                <span class="m-exp-pill">10+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-mint">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Hindi Teacher</p>
+                                <span class="m-exp-pill">14+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-lavender">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Sanskrit Teacher</p>
+                                <span class="m-exp-pill">9+ Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-teacher-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-laptop-code"></i> Computer &amp; Social Science</div>
+                    <div class="m-teacher-grid">
+                        <div class="m-teacher-mini-card m-t-lavender">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Computer Teacher</p>
+                                <span class="m-exp-pill">8+ Years Exp.</span>
+                            </div>
+                        </div>
+                        <div class="m-teacher-mini-card m-t-mint">
+                            <img src="photo ex.jpeg" alt="Name XX">
+                            <div>
+                                <h4>Name : XX</h4>
+                                <p>Social Science Teacher</p>
+                                <span class="m-exp-pill">10+ Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. What Our Students Say -->
+        <section class="m-students-say" id="mReviews">
+            <div class="m-sec-head">
+                <div class="m-sec-title">
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>What Our <span>Students</span> Say</h3>
+                </div>
+                <button type="button" class="m-blue-pill" id="mViewMoreRevBtn">
+                    View More Reviews <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="m-student-card">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=160&q=80" alt="Rohit Kumar" id="mRevImg">
+                <div class="m-student-body">
+                    <h4 id="mRevName">Rohit Kumar</h4>
+                    <div class="m-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p id="mRevText">&ldquo;Best school ever! Great teachers and amazing facilities.&rdquo;</p>
+                </div>
+                <div class="m-rev-nav">
+                    <button type="button" id="mRevPrev" aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" id="mRevNext" aria-label="Next Review"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Section-wise All Reviews Container (Expands on clicking View More Reviews) -->
+            <div class="m-all-reviews-list" id="mAllReviewsList">
+                <div class="m-rev-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-graduation-cap"></i> Academics &amp; Results</div>
+                    <div class="m-rev-mini-card">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=160&q=80" alt="Sneha Mishra">
+                        <div class="m-student-body">
+                            <h4>Sneha Mishra</h4>
+                            <div class="m-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Sankat Mochan Group of Institution gave me top academic guidance and confidence!&rdquo;</p>
+                        </div>
+                    </div>
+                    <div class="m-rev-mini-card">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=160&q=80" alt="Priya Tiwari">
+                        <div class="m-student-body">
+                            <h4>Priya Tiwari</h4>
+                            <div class="m-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Discipline, moral values, and board exam preparation here are truly unmatched.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-rev-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-chalkboard-user"></i> Teachers &amp; Guidance</div>
+                    <div class="m-rev-mini-card">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=160&q=80" alt="Rohit Kumar">
+                        <div class="m-student-body">
+                            <h4>Rohit Kumar</h4>
+                            <div class="m-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Best school ever! Great teachers and amazing facilities at Sankat Mochan.&rdquo;</p>
+                        </div>
+                    </div>
+                    <div class="m-rev-mini-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Aarav Sharma">
+                        <div class="m-student-body">
+                            <h4>Aarav Sharma</h4>
+                            <div class="m-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Every teacher guides us personally so every student excels with confidence.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-rev-sec-group">
+                    <div class="m-rev-sec-badge"><i class="fa-solid fa-building-columns"></i> Campus &amp; Facilities</div>
+                    <div class="m-rev-mini-card">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=160&q=80" alt="Aman Dubey">
+                        <div class="m-student-body">
+                            <h4>Aman Dubey</h4>
+                            <div class="m-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Smart classrooms, science labs, and supportive faculty make learning awesome!&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.5 Mobile Footer: School Contact (Phone & Email) + Send Review Form -->
+        <footer class="m-footer" id="mFooter">
+            <div class="m-footer-brand">
+                <div class="m-footer-brand-left">
+                    <img src="logo.jpg" alt="Sankat Mochan Logo">
+                    <div>
+                        <h4>Sankat Mochan</h4>
+                        <span>Group of Institution</span>
+                    </div>
+                </div>
+                <button type="button" class="m-dev-btn" id="mDevBtn">
+                    <i class="fa-solid fa-code"></i> Developer
+                </button>
+            </div>
+
+            <div class="m-dev-info-card" id="mDevInfoCard">
+                <p><i class="fa-solid fa-laptop-code"></i> <strong>Designed &amp; Developed by:</strong> Web Developer</p>
+                <a href="tel:+917408120016"><i class="fa-solid fa-phone"></i> +91 7408120016</a>
+            </div>
+
+            <div class="m-footer-contact">
+                <a href="tel:+917408120016" class="m-contact-chip">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 7408120016</span>
+                </a>
+                <a href="mailto:info@sankatmochan.edu.in" class="m-contact-chip">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@sankatmochan.edu.in</span>
+                </a>
+            </div>
+
+            <!-- Send Your Review Box -->
+            <div class="m-send-review-box">
+                <div class="m-send-rev-head">
+                    <h5><i class="fa-solid fa-pen-to-square"></i> Send Your Review</h5>
+                    <div class="m-star-picker" id="mStarPicker" aria-label="Select Rating">
+                        <i class="fa-solid fa-star active" data-val="1"></i>
+                        <i class="fa-solid fa-star active" data-val="2"></i>
+                        <i class="fa-solid fa-star active" data-val="3"></i>
+                        <i class="fa-solid fa-star active" data-val="4"></i>
+                        <i class="fa-solid fa-star active" data-val="5"></i>
+                    </div>
+                </div>
+                <form class="m-review-form" id="mReviewForm">
+                    <input type="text" id="mRevInputName" placeholder="Your Name" required>
+                    <textarea id="mRevInputMsg" rows="2" placeholder="Write your review about our school..." required></textarea>
+                    <button type="submit" class="m-send-rev-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Send Review
+                    </button>
+                    <p class="m-rev-status" id="mRevStatus"></p>
+                </form>
+            </div>
+
+            <p class="m-footer-copy">&copy; 2026 Sankat Mochan Group of Institution</p>
+        </footer>
+
+        <!-- 9. Fixed Curved Mobile Bottom Navigation Bar -->
+        <nav class="m-bottom-nav" id="mMore">
+            <a href="#mHome" class="m-nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#mHome" class="m-nav-item" id="mAboutBtn">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>About</span>
+            </a>
+            <div class="m-nav-center">
+                <a href="tel:+917408120016" class="m-call-circle">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call</span>
+                </a>
+            </div>
+            <a href="#mReviews" class="m-nav-item">
+                <i class="fa-solid fa-star"></i>
+                <span>Reviews</span>
+            </a>
+            <a href="#mHome" class="m-nav-item" id="mMoreBtn">
+                <i class="fa-solid fa-table-cells"></i>
+                <span>More</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
