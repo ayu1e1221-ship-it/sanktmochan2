@@ -12,15 +12,77 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Helper: Reliable Autoplay across Desktop, Mobile, Safari & In-App Browsers
+    function setupReliableHeroVideo(videoEl) {
+        if (!videoEl) return;
+        let hasFinishedOnce = false;
+        let hasStartedPlaying = false;
+
+        videoEl.muted = true;
+        videoEl.defaultMuted = true;
+        videoEl.volume = 0;
+        videoEl.playsInline = true;
+        videoEl.setAttribute("muted", "");
+        videoEl.setAttribute("playsinline", "");
+        videoEl.setAttribute("webkit-playsinline", "");
+
+        function isVisible(el) {
+            return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+        }
+
+        function tryPlay() {
+            if (hasFinishedOnce || !isVisible(videoEl)) return;
+            const playPromise = videoEl.play();
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        hasStartedPlaying = true;
+                    })
+                    .catch(() => {
+                        // Strict mobile browser (e.g. Safari Low Power / Data Saver): start on first touch/click
+                        const unlock = () => {
+                            if (!hasFinishedOnce && !hasStartedPlaying && isVisible(videoEl)) {
+                                videoEl.muted = true;
+                                videoEl.play().catch(() => {});
+                            }
+                            window.removeEventListener("touchstart", unlock);
+                            window.removeEventListener("click", unlock);
+                            window.removeEventListener("scroll", unlock);
+                        };
+                        window.addEventListener("touchstart", unlock, { once: true, passive: true });
+                        window.addEventListener("click", unlock, { once: true, passive: true });
+                        window.addEventListener("scroll", unlock, { once: true, passive: true });
+                    });
+            }
+        }
+
+        videoEl.addEventListener("playing", () => {
+            hasStartedPlaying = true;
+        });
+
+        videoEl.addEventListener("ended", () => {
+            hasFinishedOnce = true;
+            videoEl.currentTime = 0; // स्टार्टिंग फ्रेम पर सेट करें
+            videoEl.pause();         // स्टार्टिंग फ्रेम पर लॉक/स्टॉप करें
+        });
+
+        // Allow external replay (like Recap button) to reset state
+        videoEl._resetHeroState = () => {
+            hasFinishedOnce = false;
+            hasStartedPlaying = false;
+        };
+
+        if (videoEl.readyState >= 2) {
+            tryPlay();
+        } else {
+            videoEl.addEventListener("canplay", tryPlay, { once: true });
+            tryPlay();
+        }
+    }
+
     // 2. Hero Background Video: Play 1 time and lock on the starting frame
     const heroVideo = document.getElementById("heroBgVideo");
-
-    if (heroVideo) {
-        heroVideo.addEventListener("ended", () => {
-            heroVideo.currentTime = 0; // स्टार्टिंग फ्रेम पर सेट करें
-            heroVideo.pause();         // स्टार्टिंग फ्रेम पर लॉक/स्टॉप करें
-        });
-    }
+    setupReliableHeroVideo(heroVideo);
 
     // 3. Right Side Hero Visual Automatic Slider (3 Slides)
     // पहली बार तीनों स्लाइड 3-3 सेकंड में दिखेंगी, उसके बाद 5 सेकंड, और फिर 9 सेकंड के बाद स्लाइड बदलेगी
@@ -520,8 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mHeroVideo = document.getElementById("mHeroVideo");
 
     if (mHeroVideo) {
-        mHeroVideo.muted = true;
-        mHeroVideo.volume = 0;
+        setupReliableHeroVideo(mHeroVideo);
 
         function syncGraphDuration() {
             if (mHeroVideo.duration && isFinite(mHeroVideo.duration)) {
@@ -539,18 +600,14 @@ document.addEventListener("DOMContentLoaded", () => {
             mHeroVideo.addEventListener("loadedmetadata", syncGraphDuration);
         }
 
-        mHeroVideo.addEventListener("ended", () => {
-            mHeroVideo.currentTime = 0;
-            mHeroVideo.pause();
-        });
-
         // Recap Button: Replay Hero Video & Graph Animation together
         const mRecallBtn = document.getElementById("mRecallBtn");
         if (mRecallBtn) {
             mRecallBtn.addEventListener("click", () => {
+                if (mHeroVideo._resetHeroState) mHeroVideo._resetHeroState();
                 mHeroVideo.currentTime = 0;
                 mHeroVideo.muted = true;
-                mHeroVideo.play();
+                mHeroVideo.play().catch(() => {});
                 const currentGraph = document.getElementById("mGrowthGraph");
                 if (currentGraph && currentGraph.parentNode) {
                     const clone = currentGraph.cloneNode(true);
